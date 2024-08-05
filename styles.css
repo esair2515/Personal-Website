@@ -14,7 +14,7 @@ header {
 
 header h1 {
     margin: 0;
-    color: #4d7082; /* Blue color for the main header */
+    color: #3683ff; /* Blue color for the main header */
 }
 
 section {
@@ -22,11 +22,11 @@ section {
 }
 
 h1, h2 {
-    color: #4d7082; /* Blue color for all headers */
+    color: #3683ff; /* Blue color for all headers */
 }
 
 h2 {
-    border-bottom: 2px solid #c43b31; /* Blue color for the border */
+    border-bottom: 2px solid #8c0bb0; /* Purple color for the border */
     padding-bottom: 5px;
 }
 
