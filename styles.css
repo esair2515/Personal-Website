@@ -4,7 +4,7 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Ensure no scrollbars appear */
+    overflow: hidden;
 }
 
 header {
@@ -22,10 +22,13 @@ section {
     padding: 20px;
 }
 
+h1, h2 {
+    color: #00aaff; /* Blue color for all headings */
+}
+
 h2 {
     border-bottom: 2px solid #00aaff; /* Blue color for the border */
     padding-bottom: 5px;
-    color: #00aaff; /* Blue color for sub-headers */
 }
 
 a {
@@ -57,65 +60,18 @@ button:hover {
     transform: scale(1.1);
 }
 
-button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: bubble 1.5s infinite;
-}
-
-@keyframes bubble {
-    0% {
-        transform: translate(-50%, -50%) scale(0.8);
-        opacity: 0.5;
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1.2);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0;
-    }
+button.stop {
+    background-color: #ff4444; /* Red color for the stop button */
+    color: #fff;
 }
 
 #animationContainer {
-    position: absolute; /* Make it cover the entire viewport */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     background-color: #222;
-    pointer-events: none; /* Prevent interference with button clicks */
-}
-
-.ball {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0;
-    animation: moveBall linear;
-}
-
-@keyframes moveBall {
-    from {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    to {
-        transform: translate(100vw, 100vh);
-        opacity: 0;
-    }
-}
-
-button.stop {
-    background-color: #ff4444; /* Red color for the stop button */
-    color: #fff;
-    margin: 20px auto;
+    pointer-events: none;
 }
