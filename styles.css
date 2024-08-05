@@ -14,14 +14,19 @@ header {
 
 header h1 {
     margin: 0;
+    color: #289bd4; /* Blue color for the main header */
 }
 
 section {
     padding: 20px;
 }
 
+h1, h2 {
+    color: #289bd4; /* Blue color for all headers */
+}
+
 h2 {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #4d7082; /* Blue color for the border */
     padding-bottom: 5px;
 }
 
@@ -31,4 +36,9 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Ensure all sections are visible and have proper margins */
+section {
+    margin-bottom: 20px;
 }
