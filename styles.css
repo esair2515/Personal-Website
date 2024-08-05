@@ -4,7 +4,6 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 header {
@@ -15,19 +14,14 @@ header {
 
 header h1 {
     margin: 0;
-    color: #00aaff; /* Blue color for the main header */
 }
 
 section {
     padding: 20px;
 }
 
-h1, h2 {
-    color: #00aaff; /* Blue color for all headings */
-}
-
 h2 {
-    border-bottom: 2px solid #00aaff; /* Blue color for the border */
+    border-bottom: 2px solid #333;
     padding-bottom: 5px;
 }
 
@@ -37,41 +31,4 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 15px 30px;
-    font-size: 18px;
-    background-color: #00aaff; /* Blue color for the button */
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-button:hover {
-    background-color: #0099cc; /* Darker blue on hover */
-    transform: scale(1.1);
-}
-
-button.stop {
-    background-color: #ff4444; /* Red color for the stop button */
-    color: #fff;
-}
-
-#animationContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #222;
-    pointer-events: none;
 }
