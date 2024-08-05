@@ -55,3 +55,21 @@ button:hover {
     overflow: hidden;
     background-color: #222;
 }
+
+.ball {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    animation: moveBall 5s linear infinite;
+}
+
+@keyframes moveBall {
+    from {
+        transform: translateX(-100px);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+}
