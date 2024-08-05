@@ -7,21 +7,11 @@ document.getElementById('startAnimation').addEventListener('click', function() {
         ball.style.width = `${Math.random() * 30 + 10}px`;
         ball.style.height = ball.style.width;
         ball.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 75%)`;
-        ball.style.position = 'absolute';
-        ball.style.top = `${Math.random() * 100}%`;
+        ball.style.top = `${Math.random() * (container.clientHeight - parseFloat(ball.style.height))}px`;
         ball.style.left = `-${ball.style.width}`;
         container.appendChild(ball);
 
-        // Animate the ball
-        ball.animate([
-            { transform: 'translateX(100vw)' }
-        ], {
-            duration: Math.random() * 3000 + 2000,
-            easing: 'linear',
-            iterations: 1
-        });
-
-        // Remove ball after animation
+        // Remove the ball after its animation is done
         ball.addEventListener('animationend', function() {
             ball.remove();
         });
