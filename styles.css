@@ -14,6 +14,7 @@ header {
 
 header h1 {
     margin: 0;
+    color: #00aaff; /* Blue color for the main header */
 }
 
 section {
@@ -21,8 +22,9 @@ section {
 }
 
 h2 {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #00aaff; /* Blue color for the border */
     padding-bottom: 5px;
+    color: #00aaff; /* Blue color for sub-headers */
 }
 
 a {
@@ -36,16 +38,50 @@ a:hover {
 button {
     display: block;
     margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #333;
-    color: #e0e0e0;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #00aaff; /* Blue color for the button */
+    color: #fff;
     border: none;
+    border-radius: 50%;
     cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #444;
+    background-color: #0099cc; /* Darker blue on hover */
+    transform: scale(1.1);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: bubble 1.5s infinite;
+}
+
+@keyframes bubble {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
 }
 
 #animationContainer {
