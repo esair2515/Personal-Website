@@ -14,19 +14,14 @@ header {
 
 header h1 {
     margin: 0;
-    color: #00aaff; /* Blue color for the main header */
 }
 
 section {
     padding: 20px;
 }
 
-h1, h2 {
-    color: #00aaff; /* Blue color for all headers */
-}
-
 h2 {
-    border-bottom: 2px solid #00aaff; /* Blue color for the border */
+    border-bottom: 2px solid #333;
     padding-bottom: 5px;
 }
 
