@@ -1,3 +1,5 @@
+let animationInterval;
+
 document.getElementById('startAnimation').addEventListener('click', function() {
     const container = document.getElementById('animationContainer');
 
@@ -11,9 +13,11 @@ document.getElementById('startAnimation').addEventListener('click', function() {
         ball.style.left = `${Math.random() * 100}vw`; // Random horizontal position
         container.appendChild(ball);
 
-        // Set a random animation duration
-        const animationDuration = Math.random() * 3000 + 2000;
-        ball.style.animationDuration = `${animationDuration}ms`;
+        // Set random direction for the ball
+        const endX = Math.random() * 200 - 100; // Random X direction
+        const endY = Math.random() * 200 - 100; // Random Y direction
+        ball.style.animation = `moveBall ${Math.random() * 3 + 2}s linear`; // Random animation duration
+        ball.style.transform = `translate(${endX}vw, ${endY}vh)`;
 
         // Remove the ball after its animation is done
         ball.addEventListener('animationend', function() {
@@ -21,6 +25,10 @@ document.getElementById('startAnimation').addEventListener('click', function() {
         });
     }
 
-    // Create a new ball each time the button is clicked
-    createBall();
+    // Create a new ball every 300ms
+    animationInterval = setInterval(createBall, 300);
+});
+
+document.getElementById('stopAnimation').addEventListener('click', function() {
+    clearInterval(animationInterval);
 });
