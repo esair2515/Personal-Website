@@ -34,11 +34,6 @@ h1, h2 {
     animation: colorCycle 10s infinite; /* Slower animation for the headers */
 }
 
-h2 {
-    border-bottom: 2px solid #8c0bb0; /* Purple color for the border */
-    padding-bottom: 5px;
-}
-
 a {
     color: #00aaff;
 }
