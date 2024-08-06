@@ -31,7 +31,7 @@ section {
 }
 
 h1, h2 {
-    animation: colorCycle 10s infinite; /* Slower animation for the headers */
+    animation: colorCycle 5s infinite; /* Slower animation for the headers */
 }
 
 h2 {
