@@ -31,10 +31,11 @@ section {
 }
 
 h1, h2 {
-    animation: colorCycle 5s infinite; /* Apply the animation to all headers */
+    animation: colorCycle 10s infinite; /* Slower animation for the headers */
 }
 
 h2 {
+    display: inline-block; /* Make the border-bottom only as wide as the text */
     border-bottom: 2px solid #8c0bb0; /* Purple color for the border */
     padding-bottom: 5px;
 }
