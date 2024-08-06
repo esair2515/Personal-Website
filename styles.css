@@ -18,12 +18,12 @@ body {
     display: flex;
     width: 100vw;
     height: 100vh;
-    justify-content: center; /* Center content horizontally */
+    justify-content: space-between; /* Space between the side containers and the main content */
     align-items: center; /* Center content vertically */
 }
 
 .side {
-    width: 25%; /* Sides take up 25% of the width */
+    width: 20%; /* Reduce width to add spacing */
     background-color: #ffffff; /* White background */
     color: #121212; /* Dark text color for contrast */
     padding: 20px;
@@ -31,6 +31,7 @@ body {
     border-radius: 30px; /* Make corners rounded */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
     text-align: center; /* Center text */
+    margin: 0 10px; /* Add horizontal spacing between the side sections and main content */
 }
 
 .main-content {
@@ -42,7 +43,7 @@ body {
     border-radius: 30px; /* Make corners rounded */
     padding: 20px;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
-    box-shadow: 0 0 0 20px #b2dff7; /* Create an illusion of the same baby blue color behind the rounded corners */
+    box-shadow: 0 0 0 10px #b2dff7; /* Reduce the blue bubble effect */
 }
 
 header {
