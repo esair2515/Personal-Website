@@ -15,8 +15,8 @@ function createBall() {
     document.body.appendChild(ball);
 
     // Set random starting position
-    ball.style.left = ${Math.random() * 100}vw;
-    ball.style.top = ${Math.random() * 100}vh;
+    ball.style.left = `${Math.random() * 100}vw`;
+    ball.style.top = `${Math.random() * 100}vh`;
 
     // Set random color
     ball.style.backgroundColor = getRandomColor();
@@ -26,7 +26,7 @@ function createBall() {
     const endY = Math.random() * window.innerHeight;
 
     requestAnimationFrame(() => {
-        ball.style.transform = translate(${endX - parseFloat(ball.style.left)}px, ${endY - parseFloat(ball.style.top)}px);
+        ball.style.transform = `translate(${endX - parseFloat(ball.style.left)}px, ${endY - parseFloat(ball.style.top)}px)`;
     });
 }
 
