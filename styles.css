@@ -120,6 +120,13 @@ hr {
 }
 
 /* Style the project sections in the right panel */
+.side-right .projects-container {
+    background-color: #e0e0e0; /* Light grey background */
+    border-radius: 20px; /* Make corners rounded */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
+}
+
 .side-right h2 {
     margin-top: 0; /* Remove default margin to align with other content */
 }
