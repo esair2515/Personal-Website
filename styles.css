@@ -8,13 +8,28 @@
 }
 
 body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center; /* Center all text */
     overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.side {
+    width: 25%; /* Sides take up 25% of the width */
+    background-color: #b2dff7; /* Baby Blue */
+}
+
+.main-content {
+    width: 50%; /* Center content takes up 50% of the width */
+    background-color: #121212; /* Black background */
+    color: #e0e0e0;
+    text-align: center; /* Center all text */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
 }
 
 header {
@@ -50,11 +65,6 @@ hr {
     height: 1px;
     background: #e0e0e0;
     margin: 20px 0;
-}
-
-/* Ensure all sections are visible and have proper margins */
-section {
-    margin-bottom: 20px;
 }
 
 /* Button styling */
