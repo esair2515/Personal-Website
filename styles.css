@@ -30,6 +30,9 @@ body {
     color: #e0e0e0;
     text-align: center; /* Center all text */
     overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    border-radius: 30px; /* Make corners rounded */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 header {
