@@ -43,6 +43,14 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Style for hr elements */
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
+
 /* Ensure all sections are visible and have proper margins */
 section {
     margin-bottom: 20px;
