@@ -8,49 +8,18 @@
 }
 
 body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-.container {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-}
-
-.side {
-    width: 25%; /* Sides take up 25% of the width */
-    background-color: #b2dff7; /* Baby Blue */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.side img {
-    max-width: 80%; /* Adjust as needed */
-    height: auto;
-    border-radius: 50%; /* Make the images round */
-}
-
-.main-content {
-    width: 50%; /* Center content takes up 50% of the width */
-    background-color: #121212; /* Black background */
-    color: #e0e0e0;
-    text-align: center; /* Center all text */
-    overflow-y: auto; /* Allow vertical scrolling if content overflows */
-    border-radius: 30px; /* Make corners rounded */
-    padding: 20px;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-    box-shadow: 0 0 0 20px #b2dff7; /* Create an illusion of the same baby blue color behind the rounded corners */
 }
 
 header {
     background-color: #1e1e1e;
     padding: 20px;
     text-align: center;
-    border-radius: 20px; /* Make corners rounded */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visual effect */
+    border-radius: 10px; /* Add rounded corners */
 }
 
 header h1 {
@@ -60,10 +29,17 @@ header h1 {
 
 section {
     padding: 20px;
+    text-align: center; /* Center align text in all sections */
+    margin-bottom: 20px; /* Add space between sections */
 }
 
+/* Adjust the animation speed */
 h1, h2 {
-    animation: colorCycle 10s infinite; /* Slower animation for the headers */
+    animation: colorCycle 10s infinite; /* Apply the animation to all headers with slower speed */
+}
+
+h2 {
+    border-bottom: none; /* Remove the border */
 }
 
 a {
@@ -74,38 +50,63 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Style for hr elements */
-hr {
-    border: 0;
-    height: 1px;
-    background: #e0e0e0;
-    margin: 20px 0;
-}
-
-/* Button styling */
-#launch-balls {
-    margin: 20px 0;
+/* Style for the button */
+#confetti-button {
+    display: block;
+    margin: 20px auto; /* Center the button */
     padding: 10px 20px;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    background-color: #ff5733; /* Background color */
+    color: white;
     font-size: 16px;
     cursor: pointer;
-    border: none;
-    border-radius: 25px; /* Make the button rounded */
-    background-color: #3683ff;
-    color: #e0e0e0;
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-#launch-balls:hover {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+#confetti-button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow on hover */
 }
 
-/* Ball styling */
-.ball {
-    position: fixed;
+/* Style for the confetti animation */
+.confetti {
+    position: absolute;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: #ff5733; /* Example color */
-    z-index: 1000;
-    transition: transform 5s linear; /* Add this to animate the balls */
+    background-color: #ff5733;
+    pointer-events: none;
+    animation: moveConfetti 5s linear infinite;
+}
+
+@keyframes moveConfetti {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100vw, 100vh); }
+}
+
+/* Layout for vertical sections */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left, .right, .middle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left img {
+    max-width: 100%;
+    height: auto;
+}
+
+.middle {
+    background-color: #000;
+    border-radius: 20px;
+    margin: 0 20px;
+    padding: 20px;
+}
+
+.right {
+    display: none; /* Hides the right section */
 }
