@@ -20,7 +20,7 @@ body {
     height: 100vh;
     justify-content: space-between; /* Space between the side containers and the main content */
     align-items: center; /* Center content vertically */
-    padding: 0 20px; /* Add horizontal padding to prevent clipping */
+    padding: 0 10px; /* Add horizontal padding to prevent clipping */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .main-content {
-    width: calc(50% - 20px); /* Adjust width to account for padding */
+    width: calc(50% - 40px); /* Adjust width to account for padding */
     background-color: #121212; /* Black background */
     color: #e0e0e0;
     text-align: center; /* Center all text */
