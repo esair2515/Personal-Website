@@ -22,6 +22,15 @@ body {
 .side {
     width: 25%; /* Sides take up 25% of the width */
     background-color: #b2dff7; /* Baby Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side img {
+    max-width: 80%; /* Adjust as needed */
+    height: auto;
+    border-radius: 50%; /* Make the images round */
 }
 
 .main-content {
