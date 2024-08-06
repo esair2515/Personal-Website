@@ -33,6 +33,7 @@ body {
     border-radius: 30px; /* Make corners rounded */
     padding: 20px;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-shadow: 0 0 0 20px #b2dff7; /* Create an illusion of the same baby blue color behind the rounded corners */
 }
 
 header {
