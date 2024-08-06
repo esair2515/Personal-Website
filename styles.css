@@ -119,12 +119,13 @@ hr {
     transition: transform 5s linear; /* Add this to animate the balls */
 }
 
-/* Style the project sections in the right panel */
-.side-right .projects-container {
+/* Style the projects title in the right panel */
+.projects-title-container {
     background-color: #e0e0e0; /* Light grey background */
     border-radius: 20px; /* Make corners rounded */
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visual effect */
+    margin-bottom: 20px; /* Add space below the title box */
 }
 
 .side-right h2 {
