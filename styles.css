@@ -126,6 +126,10 @@ hr {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visual effect */
     margin-bottom: 20px; /* Add space below the title box */
+    height: 80px; /* Ensure height matches the "Hi, I'm Ehaan" box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .side-right h2 {
