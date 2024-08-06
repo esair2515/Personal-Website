@@ -33,7 +33,7 @@ body {
     border-radius: 30px; /* Make corners rounded */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
     text-align: center; /* Center text */
-    margin: 0 5px; /* Reduce horizontal spacing between the side sections and main content */
+    margin: 0 15px; /* Reduced horizontal spacing between the side sections and main content */
     z-index: 1; /* Ensure side containers are below the main content */
     overflow-y: auto; /* Allow vertical scrolling if content overflows */
     max-height: calc(100vh - 40px); /* Ensure the side content does not exceed viewport height */
