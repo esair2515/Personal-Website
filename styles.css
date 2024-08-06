@@ -123,10 +123,10 @@ hr {
 .projects-title-container {
     background-color: #e0e0e0; /* Light grey background */
     border-radius: 20px; /* Make corners rounded */
-    padding: 20px;
+    padding: 5px 20px; /* Adjust padding */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visual effect */
     margin-bottom: 20px; /* Add space below the title box */
-    height: 80px; /* Ensure height matches the "Hi, I'm Ehaan" box */
+    height: auto; /* Let content define height */
     display: flex;
     align-items: center;
     justify-content: center;
