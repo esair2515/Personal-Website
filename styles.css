@@ -16,16 +16,16 @@ body {
 
 .container {
     display: flex;
-    width: 100vw;
+    width: calc(100vw - 40px); /* Full width minus total horizontal padding */
     height: 100vh;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center content vertically */
-    padding: 0 20px; /* Padding to maintain spacing around the side containers */
+    padding: 0 20px; /* Padding to maintain equal spacing on both sides */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .side {
-    width: calc(20% - 20px); /* Adjust width considering padding and margin */
+    width: 25%; /* Side containers take up 25% of the total width */
     background-color: #ffffff; /* White background */
     color: #121212; /* Dark text color for contrast */
     padding: 20px;
@@ -39,7 +39,6 @@ body {
 
 .main-content {
     flex: 1; /* Allow main content to take up the remaining space */
-    max-width: calc(60% - 20px); /* Adjust width considering side container margin */
     background-color: #121212; /* Black background */
     color: #e0e0e0;
     text-align: center; /* Center all text */
