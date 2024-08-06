@@ -20,12 +20,12 @@ body {
     height: 100vh;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center content vertically */
-    padding: 0 20px; /* Padding to maintain equal spacing on the sides */
+    padding: 0 20px; /* Padding to maintain spacing around the side containers */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .side {
-    width: 20%; /* Width of the side containers */
+    width: calc(20% - 20px); /* Adjust width considering padding and margin */
     background-color: #ffffff; /* White background */
     color: #121212; /* Dark text color for contrast */
     padding: 20px;
@@ -33,13 +33,13 @@ body {
     border-radius: 30px; /* Make corners rounded */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
     text-align: center; /* Center text */
-    margin: 0 15px; /* Margin to reduce gap between side and middle containers */
+    margin: 0 10px; /* Margin to control spacing between side and middle containers */
     z-index: 1; /* Ensure side containers are below the main content */
 }
 
 .main-content {
     flex: 1; /* Allow main content to take up the remaining space */
-    max-width: 60%; /* Ensure the main content doesn't exceed 60% of the container width */
+    max-width: calc(60% - 20px); /* Adjust width considering side container margin */
     background-color: #121212; /* Black background */
     color: #e0e0e0;
     text-align: center; /* Center all text */
