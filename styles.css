@@ -31,13 +31,19 @@ section {
 }
 
 h1, h2 {
-    animation: colorCycle 5s infinite; /* Slower animation for the headers */
+    animation: colorCycle 10s infinite; /* Slower animation for the headers */
+    position: relative; /* Required for pseudo-element positioning */
 }
 
-h2 {
-    display: inline-block; /* Make the border-bottom only as wide as the text */
-    border-bottom: 2px solid #8c0bb0; /* Purple color for the border */
-    padding-bottom: 5px;
+h2::after {
+    content: '';
+    display: block;
+    width: 100%; /* Full width of the header text */
+    height: 2px; /* Height of the line */
+    background-color: #8c0bb0; /* Purple color for the line */
+    position: absolute;
+    bottom: -5px; /* Position the line right below the text */
+    left: 0;
 }
 
 a {
