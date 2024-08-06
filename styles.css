@@ -33,12 +33,12 @@ body {
     border-radius: 30px; /* Make corners rounded */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
     text-align: center; /* Center text */
-    margin: 0 10px; /* Margin to create a gap between side containers and middle container */
+    margin: 0 5px; /* Reduced margin to decrease gap between side and middle containers */
     z-index: 1; /* Ensure side containers are below the main content */
 }
 
 .main-content {
-    width: calc(50% - 20px); /* Adjust width to account for spacing */
+    width: calc(50% - 10px); /* Adjust width to account for spacing */
     background-color: #121212; /* Black background */
     color: #e0e0e0;
     text-align: center; /* Center all text */
