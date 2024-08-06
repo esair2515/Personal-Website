@@ -16,16 +16,16 @@ body {
 
 .container {
     display: flex;
-    width: 100vw; /* Full width of viewport */
+    width: 100vw;
     height: 100vh;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: space-between; /* Space between the side containers and the main content */
     align-items: center; /* Center content vertically */
-    padding: 0 20px; /* Padding to control spacing */
+    padding: 0 20px; /* Add horizontal padding to prevent clipping */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .side {
-    width: 25%; /* Side containers take up 25% of the total width */
+    width: 20%; /* Reduce width to add spacing */
     background-color: #ffffff; /* White background */
     color: #121212; /* Dark text color for contrast */
     padding: 20px;
@@ -33,11 +33,12 @@ body {
     border-radius: 30px; /* Make corners rounded */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
     text-align: center; /* Center text */
-    margin: 0 10px; /* Margin to control spacing between side and middle containers */
+    margin: 0 10px; /* Add horizontal spacing between the side sections and main content */
+    z-index: 1; /* Ensure side containers are below the main content */
 }
 
 .main-content {
-    width: 50%; /* Adjust width of middle container */
+    width: calc(50% - 20px); /* Adjust width to account for padding */
     background-color: #121212; /* Black background */
     color: #e0e0e0;
     text-align: center; /* Center all text */
@@ -46,6 +47,9 @@ body {
     padding: 20px;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     box-shadow: 0 0 0 10px #b2dff7; /* Reduced blue bubble effect */
+    position: relative; /* Ensure positioning context */
+    z-index: 2; /* Ensure main content is above side containers */
+    max-height: calc(100vh - 40px); /* Ensure the main content does not exceed viewport height */
 }
 
 header {
