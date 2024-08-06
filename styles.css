@@ -106,38 +106,4 @@ hr {
     border: none;
     border-radius: 25px; /* Make the button rounded */
     background-color: #3683ff;
-    color: #e0e0e0;
-    transition: box-shadow 0.3s ease;
-}
-
-#launch-balls:hover {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-}
-
-.ball {
-    position: fixed;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    background-color: #ff5733; /* Example color */
-    z-index: 1000;
-    transition: transform 5s linear; /* Add this to animate the balls */
-}
-
-.gallery-title-container, .projects-title-container {
-    background-color: #e0e0e0; /* Light grey background */
-    border-radius: 20px; /* Make corners rounded */
-    padding: 5px 20px; /* Adjust padding */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visual effect */
-    margin-bottom: 20px; /* Add space below the title box */
-    height: 50px; /* Make it the same height as "Hi, I'm Ehaan" box */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-h1.projects-title, h1.gallery-title {
-    margin: 0;
-    font-size: 24px; /* Adjust font size if necessary */
-    color: #121212; /* Match the color */
-}
+    color: #e
