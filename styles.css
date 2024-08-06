@@ -33,6 +33,7 @@ section {
 h1, h2 {
     animation: colorCycle 10s infinite; /* Slower animation for the headers */
     position: relative; /* Required for pseudo-element positioning */
+    font-size: 2em; /* Set all headers to the same size */
 }
 
 h2::after {
