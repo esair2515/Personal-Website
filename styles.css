@@ -73,4 +73,5 @@ section {
     height: 20px;
     background-color: #ff5733; /* Example color */
     z-index: 1000;
+    transition: transform 5s linear; /* Add this to animate the balls */
 }
