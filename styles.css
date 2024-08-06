@@ -20,7 +20,7 @@ body {
     height: 100vh;
     justify-content: space-between; /* Space between the side containers and the main content */
     align-items: center; /* Center content vertically */
-    padding: 0 20px; /* Horizontal padding */
+    padding: 0 20px; /* Add horizontal padding to prevent clipping */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
