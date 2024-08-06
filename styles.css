@@ -18,9 +18,9 @@ body {
     display: flex;
     width: 100vw;
     height: 100vh;
-    justify-content: space-between; /* Space between the side containers and the main content */
+    justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center content vertically */
-    padding: 0 10px; /* Padding for equal spacing around the side containers */
+    padding: 0 20px; /* Padding to maintain equal spacing on the sides */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
@@ -33,12 +33,13 @@ body {
     border-radius: 30px; /* Make corners rounded */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
     text-align: center; /* Center text */
-    margin: 0 5px; /* Reduced margin to decrease gap between side and middle containers */
+    margin: 0 15px; /* Margin to reduce gap between side and middle containers */
     z-index: 1; /* Ensure side containers are below the main content */
 }
 
 .main-content {
-    width: calc(50% - 10px); /* Adjust width to account for spacing */
+    flex: 1; /* Allow main content to take up the remaining space */
+    max-width: 60%; /* Ensure the main content doesn't exceed 60% of the container width */
     background-color: #121212; /* Black background */
     color: #e0e0e0;
     text-align: center; /* Center all text */
