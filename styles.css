@@ -126,17 +126,14 @@ hr {
     padding: 5px 20px; /* Adjust padding */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for better visual effect */
     margin-bottom: 20px; /* Add space below the title box */
-    height: auto; /* Let content define height */
+    height: 50px; /* Make it the same height as "Hi, I'm Ehaan" box */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.side-right h2 {
-    margin-top: 0; /* Remove default margin to align with other content */
-}
-
-.side-right section {
-    text-align: left; /* Align text to the left */
-    padding: 0 20px; /* Add padding for a consistent look */
+h1.projects-title {
+    margin: 0;
+    font-size: 24px; /* Adjust font size if necessary */
+    color: #121212; /* Match the color */
 }
