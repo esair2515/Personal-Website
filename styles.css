@@ -39,6 +39,12 @@ body {
     max-height: calc(100vh - 40px); /* Ensure the side content does not exceed viewport height */
 }
 
+.side img {
+    width: 100%; /* Make the image fit the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Optional: Add rounded corners to the images */
+}
+
 .main-content {
     width: calc(50% - 60px); /* Adjust width to account for reduced margin */
     background-color: #121212; /* Black background */
@@ -105,4 +111,5 @@ hr {
 }
 
 #launch-balls:hover {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
