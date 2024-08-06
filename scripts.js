@@ -18,15 +18,28 @@ function createBall() {
     ball.style.left = `${Math.random() * 100}vw`;
     ball.style.top = `${Math.random() * 100}vh`;
 
+    // Set random color
+    ball.style.backgroundColor = getRandomColor();
+
     // Animate the ball to move across the screen
     const endX = Math.random() * window.innerWidth;
     const endY = Math.random() * window.innerHeight;
 
-    ball.style.transition = 'transform 5s linear';
-    ball.style.transform = `translate(${endX - parseFloat(ball.style.left)}px, ${endY - parseFloat(ball.style.top)}px)`;
+    requestAnimationFrame(() => {
+        ball.style.transform = `translate(${endX - parseFloat(ball.style.left)}px, ${endY - parseFloat(ball.style.top)}px)`;
+    });
 }
 
 function removeBalls() {
     const balls = document.querySelectorAll('.ball');
     balls.forEach(ball => ball.remove());
+}
+
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
