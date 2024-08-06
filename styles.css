@@ -35,6 +35,8 @@ body {
     text-align: center; /* Center text */
     margin: 0 10px; /* Add horizontal spacing between the side sections and main content */
     z-index: 1; /* Ensure side containers are below the main content */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    max-height: calc(100vh - 40px); /* Ensure the side content does not exceed viewport height */
 }
 
 .main-content {
