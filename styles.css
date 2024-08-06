@@ -63,6 +63,15 @@ section {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border: none;
+    border-radius: 25px; /* Make the button rounded */
+    background-color: #3683ff;
+    color: #e0e0e0;
+    transition: box-shadow 0.3s ease;
+}
+
+#launch-balls:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 /* Ball styling */
