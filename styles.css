@@ -20,12 +20,12 @@ body {
     height: 100vh;
     justify-content: space-between; /* Space between the side containers and the main content */
     align-items: center; /* Center content vertically */
-    padding: 0 10px; /* Adjust horizontal padding to reduce the gap */
+    padding: 0 10px; /* Padding for equal spacing around the side containers */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .side {
-    width: 20%; /* Reduce width to adjust spacing */
+    width: 20%; /* Width of the side containers */
     background-color: #ffffff; /* White background */
     color: #121212; /* Dark text color for contrast */
     padding: 20px;
@@ -33,12 +33,12 @@ body {
     border-radius: 30px; /* Make corners rounded */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
     text-align: center; /* Center text */
-    margin: 0 5px; /* Adjust horizontal spacing between the side sections and main content */
+    margin: 0 10px; /* Margin to create a gap between side containers and middle container */
     z-index: 1; /* Ensure side containers are below the main content */
 }
 
 .main-content {
-    width: calc(50% - 10px); /* Adjust width to account for the new spacing */
+    width: calc(50% - 20px); /* Adjust width to account for spacing */
     background-color: #121212; /* Black background */
     color: #e0e0e0;
     text-align: center; /* Center all text */
