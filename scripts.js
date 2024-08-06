@@ -1,27 +1,45 @@
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("launch-balls").addEventListener("click", function() {
-        for (let i = 0; i < 100; i++) {
-            createBall();
-        }
-    });
+document.getElementById('launch-balls').addEventListener('click', function() {
+    const numberOfBalls = 50; // Number of balls to create
+    const duration = 5000; // Duration in milliseconds
+
+    for (let i = 0; i < numberOfBalls; i++) {
+        createBall();
+    }
+
+    setTimeout(removeBalls, duration);
 });
 
 function createBall() {
-    const ball = document.createElement("div");
-    ball.className = "ball";
-    ball.style.left = `${Math.random() * 100}vw`;
-    ball.style.backgroundColor = getRandomColor();
+    const ball = document.createElement('div');
+    ball.classList.add('ball');
     document.body.appendChild(ball);
 
-    // Use setTimeout to delay the transition to ensure it happens
-    setTimeout(() => {
-        ball.style.transform = `translateY(${window.innerHeight + 100}px)`;
-    }, 100); // Small delay to allow ball to be added to the DOM
-    
-    ball.addEventListener("transitionend", () => ball.remove());
+    // Set random starting position
+    ball.style.left = ${Math.random() * 100}vw;
+    ball.style.top = ${Math.random() * 100}vh;
+
+    // Set random color
+    ball.style.backgroundColor = getRandomColor();
+
+    // Animate the ball to move across the screen
+    const endX = Math.random() * window.innerWidth;
+    const endY = Math.random() * window.innerHeight;
+
+    requestAnimationFrame(() => {
+        ball.style.transform = translate(${endX - parseFloat(ball.style.left)}px, ${endY - parseFloat(ball.style.top)}px);
+    });
+}
+
+function removeBalls() {
+    const balls = document.querySelectorAll('.ball');
+    balls.forEach(ball => ball.remove());
 }
 
 function getRandomColor() {
-    const colors = ["#ff5733", "#33ff57", "#3683ff", "#ff33a8", "#ffd700"];
-    return colors[Math.floor(Math.random() * colors.length)];
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
