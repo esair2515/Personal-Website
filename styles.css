@@ -141,3 +141,95 @@ h1.projects-title, h1.gallery-title {
     font-size: 24px; /* Adjust font size if necessary */
     color: #121212; /* Match the color */
 }
+
+/* Media Queries for responsiveness */
+
+/* Base styles for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .side {
+        width: 100%;
+        margin: 10px 0;
+        max-height: none;
+        padding: 10px;
+    }
+
+    .main-content {
+        width: 100%;
+        margin: 10px 0;
+        max-height: none;
+        box-shadow: none;
+    }
+
+    .side img {
+        width: 100%;
+        height: auto;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .gallery-title-container, .projects-title-container {
+        height: auto;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .main-content h1 {
+        font-size: 1.5em; /* Adjust font size for mobile */
+    }
+
+    .main-content h2 {
+        font-size: 1.2em; /* Adjust font size for mobile */
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    #launch-balls {
+        margin: 10px 0;
+        padding: 10px;
+    }
+}
+
+/* Styles for very small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    .side {
+        padding: 5px;
+    }
+
+    .main-content {
+        padding: 5px;
+    }
+
+    .gallery-title-container, .projects-title-container {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .main-content h1 {
+        font-size: 1.2em; /* Further adjust font size for very small screens */
+    }
+
+    .main-content h2 {
+        font-size: 1em; /* Further adjust font size for very small screens */
+    }
+
+    section {
+        padding: 5px;
+    }
+
+    #launch-balls {
+        padding: 8px;
+    }
+}
